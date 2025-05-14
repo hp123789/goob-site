@@ -34,7 +34,7 @@ function init() {
   scene.add(light);
 
   const loader = new GLTFLoader();
-  loader.load('/eyeball.glb',
+  loader.load('./public/eyeball.glb',
     (gltf) => {
       const pivot = new THREE.Object3D();
       pivot.position.set(0, 0, 0);
