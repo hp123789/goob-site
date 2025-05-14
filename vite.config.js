@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/goob-site/', // This sets the base URL for your project in production
+  base: '/goob-site/', // Path based on your repo name
   build: {
+    outDir: 'dist', // Explicitly set output directory
+    emptyOutDir: true, // Clear the output directory before building
     rollupOptions: {
       output: {
         manualChunks: {
