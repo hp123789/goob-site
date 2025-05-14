@@ -7,8 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
+  "homepage": "https://hp123789.github.io/goob-site",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,6 +19,7 @@
     "three": "^0.176.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite": "^6.3.5"
   }
 }
