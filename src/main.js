@@ -34,7 +34,7 @@ function init() {
   scene.add(light);
 
   const loader = new GLTFLoader();
-  loader.load('./public/eyeball.glb',
+  loader.load('/eyeball.glb',
     (gltf) => {
       const pivot = new THREE.Object3D();
       pivot.position.set(0, 0, 0);
@@ -58,7 +58,6 @@ function init() {
       });
       
       scene.add(eyeball);
-      loadingElem.remove();
       
       console.log('Eyeball loaded successfully');
     },
@@ -67,8 +66,6 @@ function init() {
     },
     (error) => {
       console.error('Error loading eyeball:', error);
-      loadingElem.textContent = 'Error loading eyeball model';
-      loadingElem.style.color = 'red';
     }
   );
 
